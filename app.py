@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 from pyspark.ml.classification import RandomForestClassifier
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import VectorAssembler, StringIndexer
+import pickle 
+
 
 # Create a SparkSession
 spark = SparkSession.builder.appName('LoanPrediction').getOrCreate()
