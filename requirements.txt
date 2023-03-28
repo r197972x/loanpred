@@ -311,7 +311,6 @@ rsa==4.9
 scikit-image==0.19.3
 scikit-learn
 scipy
-screen-resolution-extra
 scs==3.2.2
 seaborn==0.12.2
 Send2Trash==1.8.0
