@@ -395,10 +395,9 @@ wrapt==1.15.0
 xarray
 xarray-einstats
 xgboost
-xkit
 xlrd
-yellowbrick==1.5
+yellowbrick
 yfinance
-zict==2.2.0
-zipp==3.15.0
+zict
+zipp
 
