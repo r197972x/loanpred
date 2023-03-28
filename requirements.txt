@@ -297,10 +297,10 @@ python-utils==3.5.2
 pytz==2022.7.1
 pytz-deprecation-shim
 pyviz-comms==2.2.1
-PyWavelets==1.4.1
+PyWavelets
 PyYAML==6.0
 pyzmq==23.2.1
-qdldl==0.1.5.post3
+qdldl==
 qudida==0.0.4
 regex==2022.10.31
 requests==2.27.1
