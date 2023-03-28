@@ -49,7 +49,7 @@ Cython==0.29.33
 dask
 datascience
 db-dtypes
-dbus-python
+dbus-python==1.2.16
 debugpy
 decorator
 defusedxml
