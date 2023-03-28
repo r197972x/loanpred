@@ -287,7 +287,7 @@ PyOpenGL==3.1.6
 pyparsing==3.0.9
 pyrsistent==0.19.3
 PySocks==1.7.1
-pytensor==2.10.1
+pytensor
 pytest==7.2.2
 python-apt==0.0.0
 python-dateutil==2.8.2
@@ -295,7 +295,7 @@ python-louvain==0.16
 python-slugify==8.0.1
 python-utils==3.5.2
 pytz==2022.7.1
-pytz-deprecation-shim==0.1.0.post0
+pytz-deprecation-shim
 pyviz-comms==2.2.1
 PyWavelets==1.4.1
 PyYAML==6.0
