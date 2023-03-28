@@ -310,7 +310,7 @@ rich==13.3.2
 rsa==4.9
 scikit-image==0.19.3
 scikit-learn
-scipy==1.10.1
+scipy
 screen-resolution-extra==0.0.0
 scs==3.2.2
 seaborn==0.12.2
