@@ -221,11 +221,11 @@ opencv-python-headless==4.7.0.72
 openpyxl==3.0.10
 opt-einsum==3.3.0
 optax==0.1.4
-orbax==0.1.6
-osqp==0.6.2.post0
+orbax
+osqp
 packaging==23.0
 palettable==3.3.0
-pandas==1.4.4
+pandas
 pandas-datareader==0.10.0
 pandas-gbq==0.17.9
 pandas-profiling==3.2.0
