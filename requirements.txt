@@ -393,12 +393,12 @@ widgetsnbextension==3.6.3
 wordcloud==1.8.2.2
 wrapt==1.15.0
 xarray
-xarray-einstats==0.5.1
-xgboost==1.7.4
-xkit==0.0.0
-xlrd==2.0.1
+xarray-einstats
+xgboost
+xkit
+xlrd
 yellowbrick==1.5
-yfinance==0.2.13
+yfinance
 zict==2.2.0
 zipp==3.15.0
 
