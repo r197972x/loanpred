@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from pyspark.ml.classification import RandomForestClassifier
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import VectorAssembler, StringIndexer
@@ -14,6 +14,11 @@ with open(f'model.pkl', 'rb') as f:
 
 # create a Flask application
 app = Flask(__name__)
+
+# create a Flask route for serving the HTML page
+@app.route("/")
+def home():
+    return render_template("main.html")
 
 
 # create a Flask route for loan prediction
@@ -35,8 +40,8 @@ def predict_loan():
         
        
 
-        df = spark.createDataFrame([[Gender, Married, Dependents, Education, Self_Employed, ApplicantIncome, CoapplicantIncome, LoanAmount,
-                                             Loan_Amount_Term, Credit_History, Property_Area]],columns=['Gender', 'Married', 'Dependents', 'Education',
+        df = spark.createDataFrame([(Gender, Married, Dependents, Education, Self_Employed, ApplicantIncome, CoapplicantIncome, LoanAmount,
+                                             Loan_Amount_Term, Credit_History, Property_Area)],columns=['Gender', 'Married', 'Dependents', 'Education',
                                                                                                         'Self_Employed', 'ApplicantIncome', 'CoapplicantIncome',
                                                                                                         'LoanAmount', 'Loan_Amount_Term', 'Credit_History',
                                                                                                         'Property_Area'])
@@ -65,20 +70,20 @@ def predict_loan():
         scaler_model = scaler.fit(df)
         df = scaler_model.transform(df)
 
-        # make a prediction
-        prediction = model.predict(df)
+        # make a loan prediction using the trained model
+        prediction = model.transform(df).select("prediction").collect()[0][0]
 
-        # return the prediction as a response
+        # return the loan prediction result as JSON
         return jsonify({"prediction": prediction})
 
 
        
-        if prediction == 0:
-            result = 'NO'
-        else:
-            result = 'YES'
+#         if prediction == 0:
+#             result = 'NO'
+#         else:
+#             result = 'YES'
 
-        return render_template('main.html',result=prediction)
+#         return render_template('main.html',result=prediction)
 
 
 if __name__ == '__main__':
