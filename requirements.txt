@@ -82,7 +82,7 @@ flatbuffers
 flax
 folium
 fonttools
-frozendict==2.3.6
+frozendict
 fsspec
 future
 gast==0.4.0
