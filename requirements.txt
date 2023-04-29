@@ -57,7 +57,6 @@ distributed
 dlib
 dm-tree
 docutils
-dopamine-rl
 earthengine-api
 easydict
 ecos
