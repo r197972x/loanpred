@@ -79,7 +79,6 @@ filelock
 firebase-admin
 Flask==2.2.3
 flatbuffers
-flax
 folium
 fonttools
 frozendict
